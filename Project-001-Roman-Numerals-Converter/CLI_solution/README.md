@@ -1,3 +1,6 @@
+sudo hostnamectl set-hostname aws-cli  (instancen adını değiştiriyor)
+bash 
+version kontrol etmelisin aws --version  version 1 yüklü 2 yi yükle
 WARNING!!!
 
 - Ok! First of all, we need to launch an EC2 instance which has Amazon Linux 2 AMI to execute commands in on hand. Because, commands can change based on operating systems. We'll attach security group which allows ssh from anywhere.
@@ -5,9 +8,9 @@ WARNING!!!
 - We should update yum package and install AWS CLI v2. (for more information to install AWS CLI v2 please look at https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)
 ```bash
 sudo yum update -y
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"  version 2 yükledi
+unzip awscliv2.zip  unzip ile açtı
+sudo ./aws/install  bu komut ile yüklüyor.
 aws --version
 ```
 
@@ -15,7 +18,7 @@ aws --version
 ```bash
 aws configure
 ```
-
+aws sts get-caller-identity --query Account --output text bu komutu koş bu komut account id sorgulayıp karşına çıkarıyor.
 1. Create Security Group
 
 ```bash
